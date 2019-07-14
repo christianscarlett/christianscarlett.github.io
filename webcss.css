@@ -1,5 +1,27 @@
-h1{
-    font-family: palatino;
-    color: grey;
-    
+
+body {
+    font-family: Palatino;
+    background-color: lavender;
+}
+
+a h4 {
+    color: rgb(255, 255, 255);
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-pills .nav-item .active {
+    /* background-color: rgb(40, 143, 212); */
+    background-color: lavender;
+    color: rgb(65, 65, 65);
+}
+
+nav {
+    background-color: rgb(65, 65, 65);
+}
+
+.container-fluid {
+    width: 100%;
 }
