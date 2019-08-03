@@ -10,23 +10,34 @@ html {
 
 body {
     font-family: Garamond;
-    /* background-color: lavender; */
-    /* background: url("images/bassbg.jpg") no-repeat center center fixed; */
     background-size: cover;
-    /* margin-bottom: 60px; */
 }
 
+/* Main Page */
+
+.row {
+    margin: 0;
+}
+
+.col-md {
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/* Navbar */
 a h2 {
+    padding-left: 15px;
     color: rgb(255, 255, 255);
 }
 
 .nav-link {
     color: white;
-    /* font-weight: bold; */
 }
 
 .nav-item .active {
-    /* background-color: rgb(40, 143, 212); */
     background-color: lavender;
     color: rgb(25, 50, 75);
 }
@@ -35,19 +46,7 @@ nav {
     background-color: rgb(25, 50, 75);
 }
 
-footer {
-    background-color: rgb(25, 50, 75);
-    
-}
-
-/* .footer {
-
-} */
-
-.footer-copyright{
-    color: white;
-}
-
+/* Left side carousel */
 .carousel {
 
     margin: 0!important;
@@ -67,14 +66,24 @@ footer {
   overflow:"hidden";
 }
 
-.row {
-    margin: 0;
+/* Right side text */
+#maintext{
+    display: flex;
+    align-items: center;
 }
 
-.col-md {
-    padding: 0;
+
+/* Footer Design */
+footer {
+    background-color: rgb(25, 50, 75);
+    
 }
 
-.container-fluid {
-    padding: 0;
+.footer-copyright{
+    color: white;
+}
+
+footer a {
+
+    padding: 5px;
 }
