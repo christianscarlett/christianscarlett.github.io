@@ -11,6 +11,7 @@ html {
 body {
     font-family: Garamond, Georgia;
     /* background-size: cover; */
+    background-image: url("../images/interlaced.png");
 }
 
 /* Main Page */
@@ -77,10 +78,13 @@ nav {
     padding: 40% 0;
 }
 
+#maintext-container-oops {
+    padding: 20% 0;
+}
+
 /* Footer Design */
 footer {
     background-color: rgb(25, 50, 75);
-    
 }
 
 .footer-copyright{
@@ -91,3 +95,4 @@ footer a {
 
     padding: 5px;
 }
+
