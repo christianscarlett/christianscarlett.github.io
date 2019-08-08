@@ -68,18 +68,8 @@ nav {
 }
 
 /* Right side text */
-/* #maintext {
-    /* display: table; */
-    /* align-items: center; */
-    /* padding: 5% 0; */
-/* }  */
-
 #maintext-container {
     padding: 40% 0;
-}
-
-#maintext-container-oops {
-    padding: 20% 0;
 }
 
 /* Footer Design */
@@ -94,5 +84,16 @@ footer {
 footer a {
 
     padding: 5px;
+}
+
+/* oops */
+#asdf {
+    height: 100%;
+}
+/* #maintext-oops {
+    height: 100%;
+} */
+#oops-container{
+    margin-top: 20%;
 }
 
