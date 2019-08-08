@@ -67,11 +67,15 @@ nav {
 }
 
 /* Right side text */
-#maintext{
-    display: flex;
-    align-items: center;
-}
+/* #maintext {
+    /* display: table; */
+    /* align-items: center; */
+    /* padding: 5% 0; */
+/* }  */
 
+#maintext-container {
+    padding: 40% 0;
+}
 
 /* Footer Design */
 footer {
