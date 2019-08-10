@@ -36,11 +36,23 @@ a h2 {
 
 .nav-link {
     color: white;
+    text-decoration: none;
 }
 
 .nav-item .active {
     background-color: lavender;
     color: rgb(25, 50, 75);
+    opacity: 1;
+}
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background-color: lavender;
+    color: rgb(25, 50, 75);
+    opacity: 1;
 }
 
 nav {
