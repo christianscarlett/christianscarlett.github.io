@@ -10,6 +10,7 @@ html {
 
 body {
     font-family: Garamond, Georgia;
+    font-size: 100%;
     /* background-size: cover; */
     background-image: url("../images/interlaced.png");
 }
@@ -81,7 +82,8 @@ nav {
 
 /* Right side text */
 #maintext-container {
-    padding: 40% 0;
+    padding: 40% 5%;
+    text-align: center;
 }
 
 /* Footer Design */
@@ -101,12 +103,14 @@ footer a {
 hr.separator {
     overflow: visible;
     padding: 0;
-    border: none;
+    /* border: none; */
     border-top: medium double #333;
     color: #333;
     text-align: center;
     width: 50%;
 }
 
-
+p {
+    font-size: 1.125rem;
+}
 

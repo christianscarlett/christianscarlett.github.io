@@ -6,7 +6,21 @@
 }
 
 .subpage-text {
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
     text-align: center;
+}
+
+.contact-icons {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.contact-icons a {
+    padding: 2%;
 }
 
 #page-center {
@@ -15,4 +29,5 @@
 
 #oops-container{
     margin-top: 20%;
+    text-align: center;
 }
