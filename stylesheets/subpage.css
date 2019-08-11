@@ -1,0 +1,18 @@
+
+.subpage-header {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.subpage-text {
+    text-align: center;
+}
+
+#page-center {
+    height: 100%;
+}
+
+#oops-container{
+    margin-top: 20%;
+}
