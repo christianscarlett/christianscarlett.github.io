@@ -24,7 +24,8 @@
 }
 
 #page-center {
-    height: 100%;
+    /* height: 100%; <-- This makes footer underlap content, but */
+    min-height: 100%;
 }
 
 #oops-container{
