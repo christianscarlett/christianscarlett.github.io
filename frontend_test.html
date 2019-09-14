@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <audio id="player" controls></audio>
+        <script>
+        const player = document.getElementById('player');
+
+        const handleSuccess = function(stream) {
+            if (window.URL) {
+            player.srcObject = stream;
+            } else {
+            player.src = stream;
+            }
+        };
+
+        function getAudioPermissions(){
+            navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+                .then(handleSuccess);
+        }
+        </script>
+        <button onclick="getAudioPermissions()">"HI"</button>
+
+    </body>
+</html>
