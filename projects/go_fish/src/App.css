@@ -1,0 +1,28 @@
+img {
+  width: 50px;
+}
+
+.hand {
+  display: flex;
+  /* flex-direction: row; */
+}
+
+.card {
+  margin: 5px;
+}
+
+.board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(25, 50, 75);
+  height: 100%;
+  width: 100%;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
