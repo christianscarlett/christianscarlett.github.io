@@ -2,6 +2,12 @@ img {
   width: 50px;
 }
 
+button {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
 .hand {
   display: flex;
   /* flex-direction: row; */

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import two from './assets/cards/2C.png';
+// import two from './assets/cards/2C.png';
 
 class Card extends React.Component {
   constructor(props) {
@@ -17,11 +17,14 @@ class Card extends React.Component {
   }
 }
 
+
+
 class Deck extends React.Component {
   constructor(props) {
     super(props);
     this.refreshDeck();
     this.state = {
+      shuffled: false,
       empty: false,
     };
   }
@@ -43,27 +46,48 @@ class Deck extends React.Component {
         this.cards[i] = this.cards[j];
         this.cards[j] = x;
     }
+    this.setState({
+      shuffled: true
+    });
   }
 
   draw() {
-    return this.cards.pop();
+    let card = this.cards.pop();
+    if (this.cards.length === 0) {
+      this.setState({empty: true});
+    }
+    return card;
   }
 
   render() {
+    let back = 'green_back';
+    if (this.state.empty) back = 'gray_back';
+
     return (
       <div class='deck'>
-        <img src={require('./assets/cards/gray_back.png')} />
+        <img src={require('./assets/cards/'+back+'.png')} />
       </div>
     );
   }
 }
 
+
+
 class Hand extends React.Component {
   constructor(props) {
     super(props);
+    this.deck = props.deck
     this.state = {
-      cards: ['2C', '3H'],
+      cards:[]
     };
+  }
+
+  drawFromDeck() {
+    let cards_ = this.state.cards.slice();
+    cards_.push(this.props.deck.draw());
+    this.setState({
+      cards: cards_
+    });
   }
 
   render() {
@@ -71,46 +95,54 @@ class Hand extends React.Component {
     this.state.cards.forEach(card => {
       cards.push(<Card value={card} />);
     });
+    let can_fish = this.props.fish ? 'disabled' : '';
+
     return (
       <div class='hand'>
+        <button onClick={() => this.drawFromDeck()} disabled={can_fish}>Go Fish</button>
         {cards}
       </div>
     );
   }
 }
 
+
+
 class Player extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      hand: new Hand(),
-    };
   }
 
   render() {
+    let fish = (this.props.turn === this.props.player);
+
     return (
-      <Hand />
+      <div>
+        <Hand deck={this.props.deck} fish={fish} />
+      </div>
     );
   }
 }
+
+
 
 class Game extends React.Component {
   constructor(props) {
     super(props);
     this.deck = new Deck();
-    this.player1 = new Player();
-    this.player2 = new Player();
+    this.deck.shuffle();
     this.state = {
       completed: false,
+      turn: 1,
     };
   }
 
   render(){
     return (
       <div class='board'>
-        {this.player1.render()}
-        {this.deck.render()}
-        {this.player2.render()}
+        <Player deck={this.deck} player={1} turn={this.state.turn}/>
+        <Deck state={this.deck.state} />
+        <Player deck={this.deck} player={2} turn={this.state.turn}/>
       </div>
     );
   }
