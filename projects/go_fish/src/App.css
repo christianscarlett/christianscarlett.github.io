@@ -1,5 +1,9 @@
 img {
-  width: 50px;
+  width: 80px;
+}
+
+.player1 {
+  margin: 0;
 }
 
 button {
@@ -10,11 +14,15 @@ button {
 
 .hand {
   display: flex;
-  /* flex-direction: row; */
 }
 
 .card {
   margin: 5px;
+}
+
+.cardimage {
+  margin: 0;
+  width: 80px;
 }
 
 .board {
@@ -31,4 +39,10 @@ html, body, #root {
   height: 100%;
   width: 100%;
   margin: 0;
+  color: white;
+  font-family: Garamond, Georgia, 'Times New Roman', Times, serif;
+}
+
+div.disabled {
+  pointer-events: none;
 }
