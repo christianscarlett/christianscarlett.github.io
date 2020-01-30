@@ -10,6 +10,12 @@
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
+    font-size: 1.125rem;
+}
+
+.project {
+    display: flex;
+    justify-content: left;
 }
 
 .contact-icons {
